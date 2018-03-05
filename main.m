@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BNRItem.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -22,6 +23,12 @@ int main(int argc, const char * argv[]) {
         for(NSString *item in items) {
             NSLog(@"%@", item);
         }
+        
+        BNRItem *item = [[BNRItem alloc] init];
+        item.itemName = @"Red Sofa";
+        item.serialNumber = @"A1B2C";
+        item.valueInDollars = 100;
+        NSLog(@"%@", item);
         
         items = nil;
     }
