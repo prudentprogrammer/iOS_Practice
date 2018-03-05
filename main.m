@@ -24,14 +24,14 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", item);
         }
         
-        BNRItem *item = [[BNRItem alloc] initWithItemName:@"Red Sofa" valueInDollars:100 serialNumber:@"A1B2C"];
-        NSLog(@"%@", item);
+        for(int i = 0; i < 10; i++) {
+            BNRItem *item = [BNRItem randomItem];
+            [items addObject:item];
+        }
         
-        BNRItem *itemWithName = [[BNRItem alloc] initWithItemName:@"Blue Sofa"];
-        NSLog(@"%@", itemWithName);
-        
-        BNRItem *itemWithNoName = [[BNRItem alloc] init];
-        NSLog(@"%@", itemWithNoName);
+        for(BNRItem *item in items) {
+            NSLog(@"%@", item);
+        }
         
         items = nil;
     }
