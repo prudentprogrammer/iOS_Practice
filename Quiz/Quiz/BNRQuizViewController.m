@@ -41,11 +41,17 @@
 }
 
 - (IBAction)showQuestion:(id)sender{
+    self.currentQuestionIndex++;
+    self.currentQuestionIndex %= [self.questions count]; // Roll over
     
+    NSString *question = self.questions[self.currentQuestionIndex];
+    self.questionLabel.text = question;
+    self.answerLabel.text = @"???"; // Reset the question
 }
 
 -(IBAction)showAnswer:(id)sender {
-    
+    NSString *answer = self.answers[self.currentQuestionIndex];
+    self.answerLabel.text = answer;
 }
 
 /*
