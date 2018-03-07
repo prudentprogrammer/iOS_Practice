@@ -23,8 +23,7 @@
     self.window.rootViewController = [[UIViewController alloc] init];
     
     BNRHypnosisView *firstView = [[BNRHypnosisView alloc] initWithFrame:firstFrame];
-    
-    [self.window addSubview:firstView];
+    [self.window.rootViewController.view addSubview:firstView];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
