@@ -12,6 +12,8 @@
 		1BADF4092060B11600313F4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BADF4072060B11600313F4D /* Main.storyboard */; };
 		1BADF40B2060B11600313F4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BADF40A2060B11600313F4D /* Assets.xcassets */; };
 		1BADF40E2060B11600313F4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BADF40C2060B11600313F4D /* LaunchScreen.storyboard */; };
+		1BADF4172064B51B00313F4D /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADF4162064B51B00313F4D /* Concentration.swift */; };
+		1BADF4192064B5B400313F4D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BADF4182064B5B400313F4D /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1BADF40A2060B11600313F4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BADF40D2060B11600313F4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BADF40F2060B11600313F4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BADF4162064B51B00313F4D /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Concentration.swift; path = Concentration/Concentration.swift; sourceTree = "<group>"; };
+		1BADF4182064B5B400313F4D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,8 @@
 		1BADF3F72060B11500313F4D = {
 			isa = PBXGroup;
 			children = (
+				1BADF4162064B51B00313F4D /* Concentration.swift */,
+				1BADF4182064B5B400313F4D /* Card.swift */,
 				1BADF4022060B11600313F4D /* Concentration */,
 				1BADF4012060B11500313F4D /* Products */,
 			);
@@ -146,6 +152,8 @@
 			files = (
 				1BADF4062060B11600313F4D /* ViewController.swift in Sources */,
 				1BADF4042060B11600313F4D /* AppDelegate.swift in Sources */,
+				1BADF4172064B51B00313F4D /* Concentration.swift in Sources */,
+				1BADF4192064B5B400313F4D /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
