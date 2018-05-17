@@ -18,34 +18,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-yV-WnT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjJ-yV-WnT">
                                 <rect key="frame" x="175" y="84" width="25" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ue2-zJ-PX9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ue2-zJ-PX9">
                                 <rect key="frame" x="138" y="130" width="98" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3G-ta-0cg"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YA-k9-11p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YA-k9-11p">
                                 <rect key="frame" x="175" y="300" width="25" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcF-wc-H3P">
-                                <rect key="frame" x="143" y="329" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcF-wc-H3P">
+                                <rect key="frame" x="140.5" y="329" width="93" height="30"/>
                                 <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showNextAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dMe-2J-wbT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8YA-k9-11p" firstAttribute="top" secondItem="Ue2-zJ-PX9" secondAttribute="bottom" constant="140" id="AQ2-ER-5yI"/>
+                            <constraint firstItem="JjJ-yV-WnT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E3h-QK-sXW"/>
+                            <constraint firstItem="qcF-wc-H3P" firstAttribute="top" secondItem="8YA-k9-11p" secondAttribute="bottom" constant="8" id="EZe-Kp-Hh0"/>
+                            <constraint firstItem="8YA-k9-11p" firstAttribute="centerX" secondItem="Ue2-zJ-PX9" secondAttribute="centerX" id="SLq-8F-peT"/>
+                            <constraint firstItem="JjJ-yV-WnT" firstAttribute="centerX" secondItem="Ue2-zJ-PX9" secondAttribute="centerX" id="Th8-Om-Q8T"/>
+                            <constraint firstItem="JjJ-yV-WnT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="V4X-tB-MCw"/>
+                            <constraint firstItem="qcF-wc-H3P" firstAttribute="centerX" secondItem="Ue2-zJ-PX9" secondAttribute="centerX" id="ngj-zE-r1c"/>
+                            <constraint firstItem="Ue2-zJ-PX9" firstAttribute="top" secondItem="JjJ-yV-WnT" secondAttribute="bottom" constant="25" id="slZ-7B-gne"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="8YA-k9-11p" id="nMy-BA-dUs"/>
+                        <outlet property="questionLabel" destination="JjJ-yV-WnT" id="DCT-K9-Xtz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
