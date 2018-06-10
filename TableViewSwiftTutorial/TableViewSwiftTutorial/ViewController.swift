@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCell = UITableViewCell()
+        let myCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         myCell.textLabel?.text = elements[indexPath.row]
         return myCell
     }
