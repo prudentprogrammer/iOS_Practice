@@ -11,8 +11,16 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var elements = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 0..<50 {
+            elements.append("Row \(i)")
+        }
+        print(elements)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
