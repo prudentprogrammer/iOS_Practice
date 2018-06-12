@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var elements = [String]()
@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         for i in 0..<50 {
             elements.append("Row \(i)")
@@ -39,6 +40,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return elements.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let myAlert = UIAlertController(title: "Title", message: "You clicked row number \(elements[indexPath.row])", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {(alertAction: UIAlertAction!) in myAlert.dismiss(animated: true, completion: nil)})
+        myAlert.addAction(cancel)
+        self.present(myAlert, animated: true)
     }
 
 
