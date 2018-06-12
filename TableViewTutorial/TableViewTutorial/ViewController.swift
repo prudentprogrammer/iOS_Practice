@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var myData = [String]() // The data used in tableview
@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         //print(myData)
         
         tableView.dataSource = self
+        tableView.delegate = self
         
     }
 
@@ -32,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Data source Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myData.count
     }
@@ -40,6 +42,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         let myCell = UITableViewCell()
         myCell.textLabel?.text = myData[indexPath.row]
         return myCell
+    }
+    
+    // MARK: Delegate Functions
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "My Alert", message: "You selected " +  myData[indexPath.row], preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
 
